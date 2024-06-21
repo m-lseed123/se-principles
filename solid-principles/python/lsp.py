@@ -1,4 +1,7 @@
 ### Without LSP
+from abc import ABC, abstractmethod
+
+
 class Vehicle:
     def start_engine(self):
         pass
@@ -37,10 +40,12 @@ drive(bicycle)
 
 
 
-class Vehicle:
+class Vehicle(ABC):
+    @abstractmethod
     def start_engine(self):
         pass
 
+    @abstractmethod
     def accelerate(self):
         pass
 
